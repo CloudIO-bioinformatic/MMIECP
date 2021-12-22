@@ -1,0 +1,706 @@
+strong{
+	font-size:10px;
+}
+p {
+
+	margin-bottom: 5px;
+}
+
+	sub {
+
+		font-size: 7pt;
+	}
+
+	div.fullwidth_intro_text p a {
+
+		color: #FF9800;
+		text-decoration: none;
+	}
+
+		div.fullwidth_intro_text p a:hover {
+
+			color: #FFAA00;
+			text-decoration: underline;
+		}
+
+h1 {
+
+	font-size: 13.5pt;
+	font-weight: normal;
+}
+
+h2 {
+
+	font-size: 12pt;
+	font-weight: bold;
+}
+
+h3 {
+
+	font-size: 11pt;
+	font-weight: bold;
+}
+
+	div.fullwidth_intro_text h1, div.fullwidth_intro_text h2, div.fullwidth_intro_text h3 {
+
+		margin-top: 15px;
+	}
+
+a img {
+
+	border: none;
+	outline: none;
+}
+
+	a.orangeLink {
+
+		color: #FF9800;
+		text-decoration: none;
+	}
+
+		a.orangeLink:hover {
+
+			color: #FF9800 !important;
+			text-decoration: underline;
+		}
+
+ul.normalList, ul.compoundList {
+
+	margin: 10px;
+	margin-left: 20px;
+}
+
+	ul.normalList li {
+
+		margin-bottom: 4px;
+		color: rgb(0, 160, 190);
+	}
+
+		ul.normalList li span {
+
+			color: #000;
+		}
+
+	ul.compoundList li {
+
+		margin-bottom: 4px;
+		color: #FF9800;
+	}
+
+		ul.compoundList li span {
+
+			color: #FFF;
+		}
+
+	div#teachers-zone_quotations ul li {
+
+		margin-bottom: 7px;
+	}
+
+	div#teachers-zone_top-links ul li {
+
+		display: inline;
+		margin-right: 10px;
+	}
+
+		div#teachers-zone_top-links ul li a, p a.orangeLink {
+
+			color: #FF9800;
+			text-decoration: none;
+		}
+
+			div#teachers-zone_top-links ul li a:hover, p a.orangeLink:hover {
+
+				color: #FC0;
+				text-decoration: underline;
+			}
+
+select {
+
+	font-family: Arial, Helvetica, sans-serif;
+	color: #369;
+}
+
+div#container {
+
+	position: absolute;
+	left: 50%;
+	top: 58%;
+	margin-top: -270px;
+	margin-left: -475px;
+	width: 950px;
+	height: 680px;
+}
+
+	div#logo_strap {
+
+		height: 50px;
+	}
+
+		div#logo_strap img {
+
+			float: right;
+		}
+
+	div#main_container {
+
+		height: 585px;
+		background-image: url('../images/layout/bg_periodic-table.jpg');
+		background-repeat: no-repeat;
+	}
+
+	div#header {
+
+		position: absolute;
+
+		width: 950px;
+		height: 135px;
+
+		background-image: url('../images/layout/bg_home_banner.jpg');
+		background-position: 0px 0px;
+		background-repeat: no-repeat;
+
+		background-color: #FFF;
+	}
+
+		div#header_title {
+
+			position: absolute;
+
+			left: 55px;
+			top: 17px;
+
+			width: 500px;
+			height: 100px;
+
+			background-color: #FFF;
+		}
+
+			div#header_title_year {
+
+				position: absolute;
+
+				left: 5px;
+				top: 5px;
+
+				padding-top: 2px;
+				padding-left: 15px;
+				padding-right: 15px;
+				font-size: 16pt;
+
+				background-color: #0CF;
+			}
+
+			div#header_title_blue {
+
+				position: absolute;
+
+				left: 5px;
+				top: 30px;
+
+				padding-top: 2px;
+				padding-left: 10px;
+				padding-right: 10px;
+				font-size: 38pt;
+
+				background-color:#0CF;
+			}
+
+			div#header_title_text {
+
+				position: absolute;
+
+				left: 248px;
+				top: 31px;
+
+				font-size: 16pt;
+				line-height: 26px;
+			}
+
+				div#header_title_text span {
+					font-size: 24pt;
+				}
+
+				.eraLogo {
+					position: absolute;
+					left: 435px;
+					top: 30px;
+				}
+
+	div#content { color: #FFF; }
+
+	div#content_intro_transparent {
+
+		position: absolute;
+
+		left: 55px;
+		top: 205px;
+
+		width: 475px;
+		height: 310px;
+
+		background-color: #000;
+
+		opacity: 0.3;
+		filter: alpha(opacity=30);
+
+		z-index: 10;
+	}
+
+	div#content_fullwidth_transparent {
+
+		position: absolute;
+
+		left: 55px;
+		top: 205px;
+
+		width: 840px;
+		height: 370px;
+
+		background-color: #000;
+
+		opacity: 0.3;
+		filter: alpha(opacity=30);
+		z-index: 10;
+	}
+
+	div#content_fullwidth {
+
+		position: absolute;
+
+		left: 55px;
+		top: 205px;
+
+		width: 810px;
+		height: 340px;
+
+		padding: 15px;
+		z-index: 100;
+	}
+
+		div.fullwidth_intro {
+
+			width: 60%;
+			margin-left: 0px;
+			float: left;
+		}
+
+			div.fullwidth_intro_image {
+
+				float: left;
+				margin-right: 10px;
+			}
+
+			div.fullwidth_intro_text h1 {
+
+				margin-top: 0px;
+				margin-bottom: 5px;
+			}
+
+		div.fullwidth_menuRight {
+
+			background-color: #FFF;
+			float: right;
+			width: 35%;
+			padding: 10px;
+		}
+
+			div.fullwidth_menuRight a.compoundLink {
+
+				display: block;
+
+				border-left: 10px solid #FF9800;
+				padding: 3px;
+				padding-left: 5px;
+				margin-bottom: 8px;
+
+				text-decoration: none;
+				font-weight: bold;
+				background-color: #FFE4BD;
+				color: #222;
+			}
+
+				div.fullwidth_menuRight a.compoundLink:hover {
+
+					background-color: #FF9800;
+				}
+
+				div.fullwidth_menuRight a.compoundLink.last {
+
+					margin-bottom: 0px;
+				}
+
+	div#content_intro {
+
+		position: absolute;
+
+		left: 55px;
+		top: 205px;
+
+		width: 445px;
+		height: 285px;
+
+		padding: 15px;
+		padding-top: 10px;
+
+		z-index: 100;
+	}
+
+		div.intro_para {
+
+			clear: both;
+			margin-bottom: 10px;
+		}
+
+			div.intro_para.firstImage {
+
+				margin-top: 25px;
+			}
+
+		div.intro_image {
+
+			border: 1px solid #FFF;
+
+			width: 80px;
+			height: 80px;
+
+			float: left;
+		}
+
+		div.intro_text {
+
+			float: left;
+			width: 350px;
+
+			font-size: 11pt;
+
+			margin-left: 10px;
+		}
+
+	div#content_menu_transparent {
+
+		position: absolute;
+
+		left: 530px;
+		top: 205px;
+
+		width: 340px;
+		height: 410px;
+
+		background-color: #000;
+
+		opacity: 0.3;
+		filter: alpha(opacity=30);
+
+		z-index: 10;
+	}
+
+	div#content_menu {
+
+		position: absolute;
+
+		left: 530px;
+		top: 205px;
+
+		width: 310px;
+		height: 380px;
+
+		padding: 15px;
+
+		z-index: 100;
+	}
+
+		div.menu_para {
+
+			margin-bottom: 8px;
+			padding-bottom: 1px;
+			border-bottom: 1px solid #FFF;
+		}
+
+			div.menu_para.last {
+
+				border-bottom: none;
+			}
+
+		div.menu_image {
+
+			width: 51px;
+			height: 58px;
+
+			float: left;
+		}
+
+		div.menu_text {
+
+			float: left;
+			width: 249px;
+
+			margin-left: 10px;
+		}
+
+			div.menu_text h1 a {
+
+				color: #FFF;
+				text-decoration: none;
+			}
+
+				div.menu_text h1 a:hover {
+
+					text-decoration: underline;
+				}
+
+			div.menu_text p {
+
+				font-size: 9pt;
+				margin-bottom: 5px;
+			}
+
+			div.menu_text ul {
+
+				list-style-type: none;
+				margin-left: 0px;
+			}
+
+				div.menu_text ul li {
+
+					margin-bottom: 2px;
+				}
+
+					div.menu_text ul li a {
+
+						display: block;
+
+						padding-top: 2px;
+						padding-left: 10px;
+						padding-bottom: 2px;
+
+						color: #FFF;
+						background-color: none;
+						text-decoration: none;
+						font-size: 10pt;
+					}
+
+						div.menu_text ul li a:hover {
+
+							background-color: #000;
+							text-decoration: none;
+						}
+
+	div#group_bar_transparent {
+
+		position: absolute;
+
+		left: 0px;
+		top: 50px;
+		height: 20px;
+		width: 100%;
+
+		background-color: #000;
+		opacity: 0.5;
+		filter: alpha(opacity=50);
+
+		z-index: 10;
+	}
+
+		div#group_bar {
+
+			position: absolute;
+
+			left: 0px;
+			top: 5px;
+
+			z-index: 100;
+		}
+
+		div#group_bar div.group_numbers {
+
+			padding-top: 5px;
+			margin-left: 45px;
+
+			width: 900px;
+		}
+
+		div#group_bar div.group_number {
+
+			display: block;
+			float: left;
+			cursor: default;
+
+			border: 1px solid #FFF;
+			padding: 2px;
+			padding-top: 1px;
+			padding-bottom: 25px;
+			text-align: center;
+			font-size: 11pt;
+			font-weight: bold;
+			margin-top: 40px;
+			margin-left: 10px;
+			margin-right: 3px;
+
+			background-color: #1C505E;
+			color: #FFF;
+
+			width: 39px;
+			height: 15px;
+		}
+
+			div#group_bar div.group_number.group_3 {
+
+				margin-left: 480px;
+			}
+
+	div#footer_links {
+
+		float: left;
+
+		margin-top: 10px;
+		margin-left: 50px;
+	}
+
+		div#footer_links_home {
+
+			position: absolute;
+			bottom: 45px;
+			right: 40px;
+		}
+
+		div#footer_links ul, div#footer_links_home ul {
+
+			list-style-type: none;
+		}
+
+			div#footer_links ul li, div#footer_links_home ul li {
+
+				float: left;
+			}
+
+
+
+				div#footer_links ul li.home, div#footer_links_home ul li.home { width: 50px; }
+
+				div#footer_links ul li.periodic-table, div#footer_links_home ul li.periodic-table { width: 100px; }
+
+				div#footer_links ul li.reaction-zone, div#footer_links_home ul li.reaction-zone { width: 100px; }
+
+				div#footer_links ul li.compounds, div#footer_links_home ul li.compounds { width: 80px; }
+				div#footer_links ul li.learningzone, div#footer_links_home ul li.learningzone {
+				width: 200px;
+				margin-right:355px;
+				}
+
+				div#footer_links ul li a, div#footer_links_home ul li a {
+					display: block;
+					color: #FFF;
+					text-align: center;
+					text-decoration: none;
+					height: 30px;
+					padding-top: 15px;
+					border-right: 1px solid #FFF;
+				}
+
+				div#footer_links ul li a.on, div#footer_links_home ul li a.on {
+
+					color: #82C8DC;
+				}
+
+				div#footer_links ul li a.last, div#footer_links_home ul li a.last {
+
+					border-right: none;
+				}
+
+				div#footer_links ul li a.flask, div#footer_links_home ul li a.flask {
+
+					padding-right: 25px;
+					background-image: url('../images/icons/reaction-flask_white.gif');
+					background-position: right;
+					background-repeat: no-repeat;
+				}
+
+				div#footer_links ul li a:hover, div#footer_links_home ul li a:hover {
+
+					text-decoration: underline;
+				}
+
+div#ancillary_links {
+
+	float: right;
+	padding-top: 10px;
+}
+
+	div#ancillary_links ul li {
+
+		display: inline;
+		margin-right: 10px;
+		padding-right: 10px;
+		border-right: 1px solid #AAA;
+		font-size: 8pt;
+		color: #AAA;
+	}
+
+		div#ancillary_links ul li.last {
+
+			padding-right: 0px;
+			margin-right: 0px;
+			border-right: none;
+		}
+
+		div#ancillary_links ul li a {
+
+			color: #333;
+			text-decoration: none;
+		}
+
+			div#ancillary_links ul li a:hover {
+
+				color: #666;
+				text-decoration: underline;
+			}
+
+div.clear {
+
+	clear: both;
+}
+
+div#cookie_policy_container {
+
+	position:relative;
+	top:35px;
+	left:-15px;
+	height:65px;
+	width:463px;
+	background-color:#eff9fb;
+	background-color:#00CCFF;
+	background-color:#007084;
+	border:1px solid #CCCCCC;
+	color:#000000;
+	color:#FFFFFF;
+	margin:10px 0 0 0;
+}
+
+	div#cookie_policy_container a#cookie_policy_container_close {
+		float:right;
+		color:#000000;
+		padding:1px 1px 3px 1px;
+		margin:5px 5px 0px 0px;
+		font-weight:bold;
+		cursor:pointer;
+	}
+
+	div#cookie_policy_container span {
+		display:block;
+		margin:0 0 0 0;
+		padding:15px;
+		width:370px;
+	}
+
+		div#cookie_policy_container span a {
+
+			color:#1556A4;
+			text-decoration:none;
+			color:#FF9800;
+		}
+
+			div#cookie_policy_container span a:hover {
+
+				text-decoration:underline;
+			}

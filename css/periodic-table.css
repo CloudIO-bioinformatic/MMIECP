@@ -1,0 +1,942 @@
+div#periodic-table_main {
+
+	margin: 0px auto;
+	margin-top: 30px;
+	margin-left: 45px;
+	padding-top: 60px;
+}
+
+	div#periodic-table_lanthanides {
+
+		float: left;
+		margin-top: 5px;
+		margin-left: 93px;
+		margin-bottom: 0px;
+	}
+
+	div#periodic-table_actinides {
+		float: left;
+		margin-left: 93px;
+	}
+
+div#legend {
+
+	position: absolute;
+	left: 161px;
+	top: 60px;
+	width: 295px;
+	height: 200px;
+	box-shadow: 5px 5px 0px #006382;
+}
+
+	div#legend_transparent {
+
+		position: absolute;
+
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+
+		background-color: #000;
+		opacity: 0.7;
+		filter: alpha(opacity=70);
+
+		z-index: 50;
+	}
+
+	div#legend_categories {
+
+		position: absolute;
+
+		left: 0px;
+		top: 0px;
+		width: 290px;
+		height: 1	47px;
+
+		padding: 4px;
+		padding-right: 0px;
+		z-index: 100;
+		color: #FFF;
+	}
+
+		div.legend_category {
+
+			display: inline-block;
+			margin-bottom: 3px;
+			font-size: 8pt;
+			clear: both;
+		}
+
+		div.legend_category span.legend_block {
+
+			display: block;
+			float: left;
+
+			width: 20px;
+			height: 10px;
+
+			margin-right: 3px;
+
+			background-color: #FFF;
+		}
+
+		div.legend_category span.legend_group-name {
+
+			display: block;
+			float: left;
+			width: 215px;
+		}
+
+		div.legend_category span.more_link {
+
+			float: left;
+			width: 47px;
+			text-align: right;
+		}
+
+			div.legend_category span.more_link a {
+
+				color: #FFF;
+				text-decoration: none;
+			}
+
+				div.legend_category span.more_link a:hover {
+
+					text-decoration: underline;
+				}
+
+				div.legend_category:hover span.more_link a {
+
+					color: #000;
+				}
+
+span.hiddenText {
+
+	display: none;
+}
+
+div.group {
+
+	float: left;
+
+	width: 45px;
+	margin-right: 3px;
+}
+
+	div.group_title {
+
+		float: left;
+		margin-right: 3px;
+		margin-top: 15px;
+
+		background-color: #82C8DC;
+
+		font-size: 11pt;
+		text-align: right;
+		padding-top: 1px;
+		padding-right: 5px;
+		width: 136px;
+		height: 35px;
+
+		-moz-box-shadow: 2px 2px 0px #006382;
+		-webkit-box-shadow: 2px 2px 0px #006382;
+		box-shadow: 2px 2px 0px #006382;
+	}
+
+	div.element {
+
+		position: relative;
+		margin-bottom: 3px;
+
+		background-color: #FFF;
+		border-top: 1px solid #FFF;
+
+		height: 51px;
+		overflow: hidden;
+
+		-moz-box-shadow: 2px 2px 0px #006382;
+		-webkit-box-shadow: 2px 2px 0px #006382;
+		box-shadow: 2px 2px 0px #006382;
+	}
+
+		div.element span {
+
+			cursor: pointer;
+			text-decoration: none;
+		}
+
+		div.element.invisible {
+
+			visibility: hidden;
+		}
+
+		div.element.last {
+
+			margin-bottom: 0px;
+		}
+
+		div.element span {
+
+			position: absolute;
+			color: #000;
+		}
+
+		div.element span.element_link {
+
+			z-index: 1000;
+		}
+
+		div.element span a {
+
+			display: block;
+
+			width: 45px;
+			height: 51px;
+
+			left: 0px;
+			top: 0px;
+
+			background-color: none;
+			outline: none;
+		}
+
+			div.element a {
+
+				text-decoration: none !important;
+			}
+
+			div.element:hover {
+
+				background-color: #000;
+				border-top: 1px solid #000;
+			}
+
+		div.element span.element_full-name {
+
+			background-color: #FFF;
+			width: 45px;
+
+			left: 0px;
+			text-align: center;
+			font-size: 7pt;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+			div.element.faded span.element_full-name {
+
+				opacity: 0.3;
+				filter: alpha(opacity=30);
+			}
+
+			div.element span.element_full-name.smallerText {
+
+				font-size: 7pt;
+
+				font-family: "Arial Narrow", Helvetica, sans-serif;
+				margin-top: -1px;
+			}
+
+			div.element:hover span.element_full-name {
+
+				background-color: #000;
+				color: #FFF;
+			}
+
+		div.element span.element_atomic-number {
+
+			width: 19px;
+			left: 3px;
+			top: 12px;
+
+			font-size: 7pt;
+
+			padding-left: 1px;
+			height: 11px;
+
+			z-index: 10px;
+		}
+
+			div.element.faded span.element_atomic-number {
+
+				opacity: 0.3;
+				filter: alpha(opacity=30);
+			}
+
+		div.element span.element_mass-number {
+
+			width: 18px;
+			float: right;
+
+			right: 3px;
+			top: 12px;
+			padding-right: 1px;
+			height: 11px;
+
+			text-align: right;
+			font-size: 7pt;
+			background-color: #FFF;
+
+			z-index: 10;
+		}
+
+			div.element:hover span.element_mass-number {
+
+				background-color: #000;
+				color: #FFF;
+			}
+
+			div.element.faded span.element_mass-number {
+
+				opacity: 0.3;
+				filter: alpha(opacity=30);
+			}
+
+		div.element span.element_symbol {
+
+			left: 3px;
+			top: 23px;
+			width: 39px;
+			height: 25px;
+
+			text-align: center;
+			font-size: 15pt;
+			font-weight: bold;
+
+			z-index: 10px;
+		}
+
+			div.element span.element_symbol.smallerText {
+
+				font-size: 13pt;
+				padding-top: 3px;
+				height: 22px;
+			}
+
+			div.element.faded span.element_symbol {
+
+				opacity: 0.3;
+				filter: alpha(opacity=30);
+			}
+
+		/* UNKNOWN CATEGORY styling ----------------------------------------------------------------------------------------- */
+		div.element div.cat_unknown, div.element_large div.cat_unknown {
+
+			background-color: #FFF;
+		}
+
+			div.dialog_title div.title_symbol.cat_unknown, div.dialog_footer.cat_unknown {
+
+				background-color: #AAA;
+			}
+
+			div.dialog_content_container div.dialog_title.cat_unknown {
+
+				border-bottom: 3px solid #AAA;
+			}
+
+			div.dialog_basicFacts p.basic_group.cat_unknown, div.dialog_basicFacts p.basic_state.cat_unknown,
+			div.dialog_basicFacts p.basic_uses.cat_unknown {
+
+				background-image: url('../images/bullets/grey_unknown.gif');
+				border-bottom: 2px solid #AAA;
+			}
+
+				div.dialog_basicFacts p.basic_facts.cat_unknown {
+
+					background-image: url('../images/bullets/grey_unknown.gif');
+				}
+
+		/* ALKALI METAL styling --------------------------------------------------------------------------------------------- */
+		div.element span.cat_alkaliMetal, div.element_large div.cat_alkaliMetal,
+		div.dialog_title div.title_symbol.cat_alkaliMetal, div.dialog_footer.cat_alkaliMetal {
+
+			background-color: #FFC400;
+		}
+
+			div.dialog_content_container div.dialog_title.cat_alkaliMetal {
+
+				border-bottom-color: #FFC400;
+			}
+
+			div.dialog_basicFacts p.basic_group.cat_alkaliMetal, div.dialog_basicFacts p.basic_state.cat_alkaliMetal,
+			div.dialog_basicFacts p.basic_uses.cat_alkaliMetal {
+
+				background-image: url('../images/bullets/yellow_alkaliMetal.gif');
+				border-bottom: 2px solid #FFC400;
+			}
+
+				div.dialog_basicFacts p.basic_facts.cat_alkaliMetal {
+
+					background-image: url('../images/bullets/yellow_alkaliMetal.gif');
+				}
+
+				div.legend_category span.alkaliMetal {
+
+					background-color: #FFC400;
+				}
+
+				div.collapsibleFrame p.frame_heading.cat_alkaliMetal.selected, div.dialog_mediaClips.cat_alkaliMetal {
+
+					background-color: #FFC400; /* 100% tint */
+				}
+
+				div.collapsibleFrame p.frame_heading.cat_alkaliMetal {
+
+					background-color: #FFECAB; /* 33% tint */
+				}
+
+		/* ALKALINE EARTH METAL styling ------------------------------------------------------------------------------------- */
+		div.element span.cat_alkalineEarthMetal, div.element_large div.cat_alkalineEarthMetal,
+		div.dialog_title div.title_symbol.cat_alkalineEarthMetal, div.dialog_title div.title_compoundIcon.cat_alkalineEarthMetal,
+		div.dialog_footer.cat_alkalineEarthMetal {
+
+			background-color: #FF9800;
+		}
+
+			div.dialog_content_container div.dialog_title.cat_alkalineEarthMetal {
+
+				border-bottom-color: #FF9800;
+			}
+
+			div.dialog_basicFacts p.basic_group.cat_alkalineEarthMetal, div.dialog_basicFacts p.basic_state.cat_alkalineEarthMetal,
+			div.dialog_basicFacts p.basic_uses.cat_alkalineEarthMetal {
+
+				background-image: url('../images/bullets/orange_earthAlkali.gif');
+				border-bottom: 2px solid #FF9800;
+			}
+
+				div.dialog_basicFacts p.basic_facts.cat_alkalineEarthMetal {
+
+					background-image: url('../images/bullets/orange_earthAlkali.gif');
+				}
+
+				div.legend_category span.alkalineEarthMetal {
+
+					background-color: #FF9800;
+				}
+
+				div.collapsibleFrame p.frame_heading.cat_alkalineEarthMetal.selected, div.dialog_mediaClips.cat_alkalineEarthMetal {
+
+					background-color: #FF9800; /* 100% tint */
+				}
+
+				div.collapsibleFrame p.frame_heading.cat_alkalineEarthMetal {
+
+					background-color: #FFDDAB; /* 33% tint */
+				}
+
+		/* TRANSITION METAL styling ----------------------------------------------------------------------------------------- */
+		div.element span.cat_transitionMetal, div.element_large div.cat_transitionMetal,
+		div.dialog_title div.title_symbol.cat_transitionMetal, div.dialog_footer.cat_transitionMetal {
+
+			background-color: #BCE600;
+		}
+
+			div.dialog_content_container div.dialog_title.cat_transitionMetal {
+
+				border-bottom-color: #BCE600;
+			}
+
+			div.dialog_basicFacts p.basic_group.cat_transitionMetal, div.dialog_basicFacts p.basic_state.cat_transitionMetal,
+			div.dialog_basicFacts p.basic_uses.cat_transitionMetal {
+
+				background-image: url('../images/bullets/green_transitionMetal.gif');
+				border-bottom: 2px solid #BCE600;
+			}
+
+				div.dialog_basicFacts p.basic_facts.cat_transitionMetal {
+
+					background-image: url('../images/bullets/green_transitionMetal.gif');
+				}
+
+				div.legend_category span.transitionMetal {
+
+					background-color: #BCE600;
+				}
+
+				div.collapsibleFrame p.frame_heading.cat_transitionMetal.selected, div.dialog_mediaClips.cat_transitionMetal {
+
+					background-color: #BCE600; /* 100% tint */
+				}
+
+				div.collapsibleFrame p.frame_heading.cat_transitionMetal {
+
+					background-color: #E9F7AB; /* 33% tint */
+				}
+
+		/* LANTHANIDE styling ----------------------------------------------------------------------------------------------- */
+		div.element span.cat_lanthanide, div.element_large div.cat_lanthanide,
+		div.dialog_title div.title_symbol.cat_lanthanide, div.dialog_footer.cat_lanthanide {
+
+			background-color: #00DB2B;
+		}
+
+			div.dialog_content_container div.dialog_title.cat_lanthanide {
+
+				border-bottom-color: #00DB2B;
+			}
+
+			div.dialog_basicFacts p.basic_group.cat_lanthanide, div.dialog_basicFacts p.basic_state.cat_lanthanide,
+			div.dialog_basicFacts p.basic_uses.cat_lanthanide {
+
+				background-image: url('../images/bullets/aqua_lanthanide.gif');
+				border-bottom: 2px solid #00DB2B;
+			}
+
+				div.dialog_basicFacts p.basic_facts.cat_lanthanide {
+
+					background-image: url('../images/bullets/aqua_lanthanide.gif');
+				}
+
+				div.legend_category span.otherTrans {
+
+					background-color: #00DB2B;
+				}
+
+				div.collapsibleFrame p.frame_heading.cat_lanthanide.selected, div.dialog_mediaClips.cat_lanthanide {
+
+					background-color: #00DB2B; /* 100% tint */
+				}
+
+				div.collapsibleFrame p.frame_heading.cat_lanthanide {
+
+					background-color: #ABF3B9; /* 33% tint */
+				}
+
+		/* ACTINIDE styling ------------------------------------------------------------------------------------------------- */
+		div.element span.cat_actinide, div.element_large div.cat_actinide,
+		div.dialog_title div.title_symbol.cat_actinide, div.dialog_footer.cat_actinide {
+
+			background-color: #00DB2B;
+		}
+
+			div.dialog_content_container div.dialog_title.cat_actinide {
+
+				border-bottom-color: #00DB2B;
+			}
+
+			div.dialog_basicFacts p.basic_group.cat_actinide, div.dialog_basicFacts p.basic_state.cat_actinide,
+			div.dialog_basicFacts p.basic_uses.cat_actinide {
+
+				background-image: url('../images/bullets/taupe_actinide.gif');
+				border-bottom: 2px solid #00DB2B;
+			}
+
+				div.dialog_basicFacts p.basic_facts.cat_actinide {
+
+					background-image: url('../images/bullets/taupe_actinide.gif');
+				}
+
+				div.legend_category span.otherTrans {
+
+					background-color: #00DB2B;
+				}
+
+				div.collapsibleFrame p.frame_heading.cat_actinide.selected {
+
+					background-color: #00DB2B; /* 100% tint */
+				}
+
+				div.collapsibleFrame p.frame_heading.cat_actinide {
+
+					background-color: #ABF3B9; /* 33% tint */
+				}
+
+		/* METALLOID styling ------------------------------------------------------------------------------------------------ */
+		div.element span.cat_metalloid, div.element_large div.cat_metalloid,
+		div.dialog_title div.title_symbol.cat_metalloid, div.dialog_footer.cat_metalloid {
+
+			background-color: #933;
+		}
+
+			div.dialog_content_container div.dialog_title.cat_metalloid {
+
+				border-bottom-color: #933;
+			}
+
+			div.dialog_basicFacts p.basic_group.cat_metalloid, div.dialog_basicFacts p.basic_state.cat_metalloid,
+			div.dialog_basicFacts p.basic_uses.cat_metalloid {
+
+				background-image: url('../images/bullets/rust_metalloid.gif');
+				border-bottom: 2px solid #933;
+			}
+
+				div.dialog_basicFacts p.basic_facts.cat_metalloid {
+
+					background-image: url('../images/bullets/rust_metalloid.gif');
+				}
+
+		/* OTHER METAL styling ---------------------------------------------------------------------------------------------- */
+		div.element span.cat_otherMetal, div.element_large div.cat_otherMetal,
+		div.dialog_title div.title_symbol.cat_otherMetal, div.dialog_footer.cat_otherMetal {
+
+			background-color: #0FB;
+		}
+
+			div.dialog_content_container div.dialog_title.cat_otherMetal {
+
+				border-bottom-color: #0FB;
+			}
+
+			div.dialog_basicFacts p.basic_group.cat_otherMetal, div.dialog_basicFacts p.basic_state.cat_otherMetal,
+			div.dialog_basicFacts p.basic_uses.cat_otherMetal {
+
+				background-image: url('../images/bullets/green_otherMetal.gif');
+				border-bottom: 2px solid #0FB;
+			}
+
+				div.dialog_basicFacts p.basic_facts.cat_otherMetal {
+
+					background-image: url('../images/bullets/green_otherMetal.gif');
+				}
+
+				div.legend_category span.otherMetal {
+
+					background-color: #0FB;
+				}
+
+				div.collapsibleFrame p.frame_heading.cat_otherMetal.selected, div.dialog_mediaClips.cat_otherMetal {
+
+					background-color: #0FB; /* 100% tint */
+				}
+
+				div.collapsibleFrame p.frame_heading.cat_otherMetal {
+
+					background-color: #ABFFE9; /* 33% tint */
+				}
+
+		/* NON-METAL styling ------------------------------------------------------------------------------------------------ */
+		div.element span.cat_nonMetal, div.element_large div.cat_nonMetal,
+		div.dialog_title div.title_symbol.cat_nonMetal, div.dialog_footer.cat_nonMetal {
+
+			background-color: #0CF;
+		}
+
+			div.dialog_content_container div.dialog_title.cat_nonMetal {
+
+				border-bottom-color: #0CF;
+			}
+
+			div.dialog_basicFacts p.basic_group.cat_nonMetal, div.dialog_basicFacts p.basic_state.cat_nonMetal,
+			div.dialog_basicFacts p.basic_uses.cat_nonMetal {
+
+				background-image: url('../images/bullets/blue_nonMetal.gif');
+				border-bottom: 2px solid #0CF;
+			}
+
+				div.dialog_basicFacts p.basic_facts.cat_nonMetal {
+
+					background-image: url('../images/bullets/blue_nonMetal.gif');
+				}
+
+				div.legend_category span.nonMetal {
+
+					background-color: #0CF;
+				}
+
+				div.collapsibleFrame p.frame_heading.cat_nonMetal.selected, div.dialog_mediaClips.cat_nonMetal {
+
+					background-color: #0CF; /* 100% tint */
+				}
+
+				div.collapsibleFrame p.frame_heading.cat_nonMetal {
+
+					background-color: #ABEEFF; /* 33% tint */
+				}
+
+		/* HALOGEN styling -------------------------------------------------------------------------------------------------- */
+		div.element span.cat_halogen, div.element_large div.cat_halogen,
+		div.dialog_title div.title_symbol.cat_halogen, div.dialog_footer.cat_halogen {
+
+			background-color: #E675FF;
+		}
+
+			div.dialog_content_container div.dialog_title.cat_halogen {
+
+				border-bottom-color: #E675FF;
+			}
+
+			div.dialog_basicFacts p.basic_group.cat_halogen, div.dialog_basicFacts p.basic_state.cat_halogen,
+			div.dialog_basicFacts p.basic_uses.cat_halogen {
+
+				background-image: url('../images/bullets/purple_halogen.gif');
+				border-bottom: 2px solid #E675FF;
+			}
+
+				div.dialog_basicFacts p.basic_facts.cat_halogen {
+
+					background-image: url('../images/bullets/purple_halogen.gif');
+				}
+
+				div.legend_category span.halogen {
+
+					background-color: #E675FF;
+				}
+
+				div.collapsibleFrame p.frame_heading.cat_halogen.selected, div.dialog_mediaClips.cat_halogen {
+
+					background-color: #E675FF; /* 100% tint */
+				}
+
+				div.collapsibleFrame p.frame_heading.cat_halogen {
+
+					background-color: #F7D2FF; /* 33% tint */
+				}
+
+		/* NOBLE GAS styling ------------------------------------------------------------------------------------------------ */
+		div.element span.cat_nobleGas, div.element_large div.cat_nobleGas,
+		div.dialog_title div.title_symbol.cat_nobleGas, div.dialog_footer.cat_nobleGas {
+
+			background-color: #FF4D00;
+		}
+
+			div.dialog_content_container div.dialog_title.cat_nobleGas {
+
+				border-bottom-color: #FF4D00;
+			}
+
+			div.dialog_basicFacts p.basic_group.cat_nobleGas, div.dialog_basicFacts p.basic_state.cat_nobleGas,
+			div.dialog_basicFacts p.basic_uses.cat_nobleGas {
+
+				background-image: url('../images/bullets/red_nobleGas.gif');
+				border-bottom: 2px solid #FF4D00;
+			}
+
+				div.dialog_basicFacts p.basic_facts.cat_nobleGas {
+
+					background-image: url('../images/bullets/red_nobleGas.gif');
+				}
+
+				div.legend_category span.nobleGas {
+
+					background-color: #FF4D00;
+				}
+
+				div.collapsibleFrame p.frame_heading.cat_nobleGas.selected, div.dialog_mediaClips.cat_nobleGas {
+
+					background-color: #FF4D00; /* 100% tint */
+				}
+
+				div.collapsibleFrame p.frame_heading.cat_nobleGas {
+
+					background-color: #FFC4AB; /* 33% tint */
+				}
+
+		div.legend_category:hover {
+
+			background-color: #82C8DC;
+			color: #222;
+		}
+
+			div.legend_category:hover a {
+
+				color: #222;
+			}
+
+div#element_large_container {
+
+	position: absolute;
+	left: 467px;
+	top: 105px;
+	width: 130px;
+	height: 145px;
+
+	background-color: #000;
+
+	-moz-box-shadow: 5px 5px 0px #006382;
+	-webkit-box-shadow: 5px 5px 0px #006382;
+	box-shadow: 5px 5px 0px #006382;
+}
+
+	div#element_large_container div.element_large {
+
+		height: 145px;
+		border: 10px solid #000;
+		border-top: 2px solid #000;
+
+		overflow: hidden;
+	}
+
+		div#element_large_container div.element_large div.element_large_full-name {
+
+			width: 100%;
+
+			text-align: center;
+			font-size: 11pt;
+			font-weight: bold;
+
+			padding-top: 1px;
+			padding-bottom: 5px;
+
+			background-color: #000;
+			color: #FFF;
+		}
+
+			div#element_large_container div.element_large div.element_large_full-name.smallerText {
+
+				font-size: 11pt;
+			}
+
+		div#element_large_container div.element_large div.element_large_atomic-number {
+
+			float: left;
+			width: 42%;
+			padding-top: 3px;
+			padding-bottom: 3px;
+			padding-left: 5px;
+
+			font-size: 14pt;
+			font-weight: bold;
+		}
+
+		div#element_large_container div.element_large div.element_large_mass-number {
+
+			float: right;
+			width: 42%;
+			padding-top: 3px;
+			padding-bottom: 3px;
+			padding-right: 5px;
+
+			font-size: 12pt;
+			text-align: right;
+
+			background-color: #000;
+			color: #FFF;
+		}
+
+		div#element_large_container div.element_large div.element_large_symbol {
+
+			clear: both;
+
+			text-align: center;
+			font-size: 30pt;
+			font-weight: bold;
+
+			padding-top: 8px;
+
+			min-height: 150px;
+		}
+
+			div#element_large_container div.element_large div.element_large_symbol.smallerText {
+
+				font-size: 40pt;
+				padding-top: 14px;
+			}
+
+div#state_selector {
+
+	position: relative;
+	clear: both;
+	float: left;
+	width: 530px;
+	height: 45px;
+	margin-left: 0px;
+	margin-top: 10px;
+}
+
+	div#state_selector_transparent {
+
+		position: absolute;
+		left: 30px;
+		top: 0px;
+		width: 530px;
+		height: 45px;
+		background-color: #000;
+		opacity: 0.5;
+		filter: alpha(opacity=50);
+		z-index: 10;
+	}
+
+	div#state_selector div#state_selector_buttons {
+
+		position: absolute;
+		left: 0px;
+		top: 0px;
+
+		width: 530px;
+		height: 45px;
+
+		z-index: 100;
+	}
+
+	div#state_selector div#state_selector_buttons ul {
+
+		margin-top: 13px;
+		margin-left: 45px;
+		list-style-type: none;
+	}
+
+		div#state_selector div#state_selector_buttons ul li {
+
+			float: left;
+			margin-right: 5px;
+			width: 110px;
+		}
+
+		div#state_selector div#state_selector_buttons ul li a {
+
+			display: block;
+
+
+			padding-top: 1px;
+
+			font-size: 11pt;
+			font-weight: bold;
+
+			text-align: center;
+			text-decoration: none;
+
+			border: 1px solid #FFF;
+			color: #FFF;
+		}
+
+			div#state_selector div#state_selector_buttons ul li a:hover,
+			div#state_selector div#state_selector_buttons ul li a.on {
+
+				background-color: #82C8DC;
+				color: #1C505E;
+			}
+
+div.clear {
+
+	clear: both;
+}
+
+a.noPointer {
+
+	cursor: default;
+}
+
+span.hiddenText {
+
+	display: none;
+}
+
+input.jmol_3d {
+
+	background-color: #000;
+	color: #FFF;
+
+	margin-left: 0px;
+
+	padding: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+
+	border: 1px solid #000;
+	font-size: 8pt !important;
+	font-weight: bold;
+	width: 80px;
+
+	cursor: pointer;
+}
+
+	input.jmol_3d:hover {
+
+		background-color: #FFF;
+		color: #000;
+		border: 1px solid #FFF;
+
+		text-decoration: none;
+	}
